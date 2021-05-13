@@ -1,0 +1,37 @@
+h3 {
+    font-size: 15px;
+}
+
+.poster {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #31375a;
+    /* background-color: #283046; */
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.type {
+    border-radius: 5px;
+    margin-left: 10px !important;
+    border: 1px solid #7367f0!important;
+    color: #7367f0;
+    padding: 3px;
+    background-color: transparent;
+}
+
+.subtitle {
+    font-weight: 450;
+    font-size: 0.985rem;
+    color: #d0d2d6!important;
+    margin-left: 20px !important;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 1.285rem;
+    color: #d0d2d6!important;
+    margin-left: 20px !important;
+    opacity: 0.7;
+}

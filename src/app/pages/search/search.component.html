@@ -1,0 +1,10 @@
+<h1>{{results}}</h1>
+<hr>
+
+<div class="row mt-3" *ngIf="pokemons.length > 0">
+    <div class="col">
+        <app-pokemon-grid
+        *ngIf="pokemons.length > 0"
+        [pokemons]="pokemons"></app-pokemon-grid>
+    </div>
+</div>

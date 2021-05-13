@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-sm">
+    <a class="navbar-brand" routerLink="/home">Pokedex</a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+     
+    </div>
+
+    <form class="d-flex right" style="margin-right: 10px;">
+        <input class="form-control mr-sm-2" type="search"  #txtBuscar (keyup.enter)="search( txtBuscar.value )" placeholder="Search" aria-label="Search">
+        <button (click)="search( txtBuscar.value )"
+        class="btn btn-outline-success" type="submit" style="margin-left:10px;">Buscar</button>
+    </form>
+
+  </nav>
