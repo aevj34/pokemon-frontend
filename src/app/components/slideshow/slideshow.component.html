@@ -1,0 +1,36 @@
+<!-- Slider main container -->
+<div class="swiper-container">
+
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div *ngFor="let pokemon of pokemons"class="swiper-slide text-center">
+        <img [src]="pokemon.id | image" class="text-center" width="300" height="300" style="cursor: pointer;" (click)="onPokemonClick( pokemon )">
+
+      
+
+            <div class="row mt-10">
+               <div class="col"> 
+                <br>
+                <h1>{{ pokemon.name.english }}</h1>
+           
+                <br>
+                <!-- <h3>{{ pokemon.type | json}}</h3> -->
+                <div class="text-center">
+                  <span *ngFor="let type of pokemon.type" class="type">{{type}}</span>
+                </div>
+               </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div (click)="onSlidePrev()" class="swiper-button-prev"></div>
+    <div (click)="onSlideNext()" class="swiper-button-next"></div>
+
+  </div>

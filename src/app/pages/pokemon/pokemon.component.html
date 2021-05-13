@@ -1,0 +1,145 @@
+<div class="row animate__animated animate__fadeIn animate__faster" *ngIf="pokemon">
+    <div class="col-md-4">
+        <!-- Imagen -->
+       <div style="margin-right: 10px;">
+        <img [src]="pokemon.id | image" 
+        [alt]="pokemon.name.english" style="background:transparent;border: transparent;"
+        class="img-thumbnail">
+       </div>
+    </div>
+
+    <div class="col-md-8">
+        <h3 class="ml-5">{{ pokemon.name.english }}</h3>    
+            <p class="card-text font-small-2 mr-25 mb-0">Japonés: {{ pokemon.name.japanese }} </p>
+            <p class="card-text font-small-2 mr-25 mb-0">Chino: {{ pokemon.name.chinese }}  </p>
+            <p class="card-text font-small-2 mr-25 mb-0">Francés: {{ pokemon.name.french }} </p>
+        <br>
+
+        <h4 class="card-title">Características</h4> 
+
+        <div class="card" style="background: transparent;border: 1px solid #31375a;">
+          
+            
+            <div class="card-body statistics-body">
+                <div class="row">
+                    <div class="col-sm-6 col-xl-3 mb-2 mb-xl-0">
+                        <div class="media" >
+                            <div class="media-aside mr-2 align-self-start">
+                                <span class="b-avatar badge-light-primary rounded-circle" style="width: 48px; height: 48px;">
+                                    <span class="b-avatar-custom">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up">
+                                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                            <polyline points="17 6 23 6 23 12"></polyline>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="media-body my-auto">
+                                <h4 class="font-weight-bolder mb-0"> {{pokemon.base.HP}} </h4>
+                                <p class="card-text font-small-3 mb-0"> HP </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6 col-xl-3 mb-2 mb-xl-0">
+                        <div class="media" >
+                            <div class="media-aside mr-2 align-self-start">
+                                <span class="b-avatar badge-light-primary rounded-circle" style="width: 48px; height: 48px;">
+                                    <span class="b-avatar-custom">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up">
+                                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                            <polyline points="17 6 23 6 23 12"></polyline>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="media-body my-auto">
+                                <h4 class="font-weight-bolder mb-0"> {{pokemon.base.Attack}} </h4>
+                                <p class="card-text font-small-3 mb-0"> Ataque </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-sm-6 col-xl-3 mb-2 mb-xl-0">
+                        <div class="media">
+                            <div class="media-aside mr-2 align-self-start">
+                                <span class="b-avatar badge-light-info rounded-circle" style="width: 48px; height: 48px;">
+                                    <span class="b-avatar-custom">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                    </span><!---->
+                                </span>
+                            </div>
+                            <div class="media-body my-auto">
+                                <h4 class="font-weight-bolder mb-0"> {{pokemon.base.Defense}} </h4>
+                                <p class="card-text font-small-3 mb-0"> Defensa </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6 col-xl-3 mb-2 mb-sm-0">
+                        <div class="media">
+                            <div class="media-aside mr-2 align-self-start">
+                                <span class="b-avatar badge-light-danger rounded-circle" style="width: 48px; height: 48px;">
+                                    <span class="b-avatar-custom">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box">
+                                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                            <line x1="12" y1="22.08" x2="12" y2="12">
+
+                                            </line></svg></span><!----></span>
+                             </div>
+
+                             <div class="media-body my-auto">
+                                <h4 class="font-weight-bolder mb-0"> {{pokemon.base.Speed}} </h4>
+                                <p class="card-text font-small-3 mb-0"> Velocidad </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row ">
+            <div class="col">
+
+                
+                <br>
+                <h4 class="card-title">Tipo</h4> 
+                
+                <!-- <h3>{{ pokemon.type | json}}</h3> -->
+                <div class="mt-3">
+                  <span *ngFor="let type of pokemon.type" class="type">{{type}}</span>
+                </div>
+            </div>
+            <div class="col text-white">
+                <!-- {{ pokemon.vote_average | number:'1.1-2' }} -->
+            </div>
+        </div>
+
+        <!-- <div class="row mt-3">
+            <div class="col text-white">
+                {{ pokemon.overview }}
+            </div>
+        </div> -->
+
+        <div class="row mt-5">
+            <div class="col">
+                <button class="btn btn-outline-info"
+                        (click)="onRegresar()">
+                    Regresar
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

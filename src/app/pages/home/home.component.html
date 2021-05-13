@@ -1,0 +1,25 @@
+<h1>Pokemones de Ash</h1>
+
+<div class="row" *ngIf="pokemonsSlideshow.length > 0">
+    <div class="col">
+        <app-slideshow [pokemons]="pokemonsSlideshow"></app-slideshow>
+    </div>
+</div>
+
+<br>
+<h1> Pokemones Recientes</h1>
+<div class="row mt-0" *ngIf="recentPokemons.length > 0">
+    <div class="col">
+        <app-types-slideshow [pokemons]="recentPokemons"></app-types-slideshow>
+    </div>
+</div>
+
+<h1 class="mt-1">Todos los pokemones</h1>
+<div class="row mt-3" *ngIf="pokemons.length > 0">
+    <div class="col">
+        <app-pokemon-grid
+        *ngIf="pokemons.length > 0"
+        [pokemons]="pokemons"></app-pokemon-grid>
+    </div>
+</div>
+

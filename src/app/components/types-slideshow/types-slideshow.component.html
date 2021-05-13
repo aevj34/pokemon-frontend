@@ -1,0 +1,16 @@
+<div class="swiper-container2">
+    <div class="swiper-wrapper">
+
+        <div *ngFor="let pokemon of pokemons"
+             class="swiper-slide text-white text-center">
+
+            <img [src]="pokemon.id | image" 
+                 [alt]="pokemon.name.english" (click)="onPokemonClick( pokemon )"
+                 class="img-thumbnail poster mb-2" style="cursor: pointer;"/>
+
+            {{ pokemon.name.english }}
+
+        </div>
+
+    </div>
+</div>
